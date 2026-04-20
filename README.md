@@ -1,182 +1,97 @@
-# About
-
-[Half-Life Updated](https://github.com/twhl-community/halflife-updated), [Opposing Force Updated](https://github.com/twhl-community/halflife-op4-updated) and [Blue Shift Updated](https://github.com/twhl-community/halflife-bs-updated) are repositories that provide updated versions of the Half-Life SDK, targeted to the 3 Half-Life 1 PC games officially available.
-
-# Purpose
-
-Each repository provides project files compatible with Visual Studio 2019 and 2022, as well as bug fixes. The Opposing Force and Blue Shift projects are reference implementations of their respective games. This means they provide the original features, implemented as they are in the original games, including the many cases of code duplication.
-
-The goal of the Updated repositories is to allow modders to make mods based on these games, while providing bug fixes that could be applied to the official games as well. A mod installation is also provided for each repository to allow players to play these games with all bug fixes applied.
-
-This mod installation includes files that are required when making a mod based on these SDKs.
-
-The following types of changes are **in scope** for this project:
-* Bug fixes
-* Features to improve the game's code (refactoring, generalizing, simplifying). This does not include complete redesigns of systems as this makes it much harder for modders to integrate changes and get started with Half-Life modding
-* Fixing game-breaking bugs in game assets (e.g. soft-locked trigger setups)
-
-The following types of changes are **out of scope**:
-* Graphical upgrades
-* Physics engine changes
-* Other engine changes
-* Gameplay changes
-
-If you need help setting up the SDK or developing a mod please ask on the [TWHL website](https://twhl.info/) or on its [Discord server](https://discord.gg/jEw8EqD).
-
-The TWHL wiki has tutorials to guide you through making a mod: https://twhl.info/wiki/page/Half-Life_Programming_-_Getting_Started
-
-See the `#welcome` channel for more information about the Discord server. Please do not use the `#unified-sdk` channel for general help requests, there are channels for modding help.
-
-See the TWHL thread for status updates about these projects: https://twhl.info/thread/view/20055
-
-# Requirements to run mods built with this SDK
-
-Only the latest Steam version of Half-Life is supported. For the Opposing Force and Blue Shift repositories you will need to own the games and have them installed to use their assets.
-
-# Building this SDK
-
-See [BUILDING.md](BUILDING.md)
-
-# Mod installation instructions
-
-See [INSTALL.md](INSTALL.md)
-
-# What isn't supported
-
-Backwards compatibility with WON and older versions of Steam Half-Life is not supported. Xash isn't supported, but may work. You cannot use Updated clients to play on vanilla servers, you also cannot use vanilla clients to play on Updated servers.
-
-Placing Updated game dlls in vanilla installations is not supported.
-
-These repositories have a limited scope and will not have major changes applied.
-
-# Deathmatch Classic and Ricochet
-
-The source code for Deathmatch Classic and Ricochet is in the original Half-Life SDK. The purpose of these updated repositories is to provide updated versions only for Half-Life and its expansion packs, so the source code for these mods has been removed.
-
-Since the vanilla versions don't compile under newer versions of Visual Studio separate repositories have been made that provide the same updates to make them compile:
-* https://github.com/twhl-community/dmc-updated
-* https://github.com/twhl-community/ricochet-updated
-
-Unlike the other updated repositories these only provide basic fixes. No further development and support will be provided.
-
-# Changelog
-
-See [CHANGELOG.md](CHANGELOG.md) and [FULL_UPDATED_CHANGELOG.md](FULL_UPDATED_CHANGELOG.md)
-
-# Half Life 1 SDK LICENSE
-
-Half Life 1 SDK Copyright © Valve Corp.
-
-THIS DOCUMENT DESCRIBES A CONTRACT BETWEEN YOU AND VALVE CORPORATION (“Valve”).  PLEASE READ IT BEFORE DOWNLOADING OR USING THE HALF LIFE 1 SDK (“SDK”). BY DOWNLOADING AND/OR USING THE SOURCE ENGINE SDK YOU ACCEPT THIS LICENSE. IF YOU DO NOT AGREE TO THE TERMS OF THIS LICENSE PLEASE DON’T DOWNLOAD OR USE THE SDK.
-
-You may, free of charge, download and use the SDK to develop a modified Valve game running on the Half-Life engine.  You may distribute your modified Valve game in source and object code form, but only for free. Terms of use for Valve games are found in the Steam Subscriber Agreement located here: http://store.steampowered.com/subscriber_agreement/ 
-
-You may copy, modify, and distribute the SDK and any modifications you make to the SDK in source and object code form, but only for free.  Any distribution of this SDK must include this license.txt and third_party_licenses.txt.  
- 
-Any distribution of the SDK or a substantial portion of the SDK must include the above copyright notice and the following: 
-
-DISCLAIMER OF WARRANTIES.  THE SOURCE SDK AND ANY OTHER MATERIAL DOWNLOADED BY LICENSEE IS PROVIDED “AS IS”.  VALVE AND ITS SUPPLIERS DISCLAIM ALL WARRANTIES WITH RESPECT TO THE SDK, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, TITLE AND FITNESS FOR A PARTICULAR PURPOSE.  
-
-LIMITATION OF LIABILITY.  IN NO EVENT SHALL VALVE OR ITS SUPPLIERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, OR ANY OTHER PECUNIARY LOSS) ARISING OUT OF THE USE OF OR INABILITY TO USE THE ENGINE AND/OR THE SDK, EVEN IF VALVE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  
- 
- 
-If you would like to use the SDK for a commercial purpose, please contact Valve at sourceengine@valvesoftware.com.
-
-
-# Half-Life 1
-
-This is the README for the Half-Life 1 engine and its associated games.
-
-Please use this repository to report bugs and feature requests for Half-Life 1 related products.
-
-## Reporting Issues
-
-If you encounter an issue while using Half-Life 1 games, first search the [issue list](https://github.com/ValveSoftware/halflife/issues) to see if it has already been reported. Include closed issues in your search.
-
-If it has not been reported, create a new issue with at least the following information:
-
-- a short, descriptive title;
-- a detailed description of the issue, including any output from the command line;
-- steps for reproducing the issue;
-- your system information.\*; and
-- the `version` output from the in‐game console.
-
-Please place logs either in a code block (press `M` in your browser for a GFM cheat sheet) or a [gist](https://gist.github.com).
-
-\* The preferred and easiest way to get this information is from Steam's Hardware Information viewer from the menu (`Help -> System Information`). Once your information appears: right-click within the dialog, choose `Select All`, right-click again, and then choose `Copy`. Paste this information into your report, preferably in a code block.
-
-## Conduct
-
-
-There are basic rules of conduct that should be followed at all times by everyone participating in the discussions.  While this is generally a relaxed environment, please remember the following:
-
-- Do not insult, harass, or demean anyone.
-- Do not intentionally multi-post an issue.
-- Do not use ALL CAPS when creating an issue report.
-- Do not repeatedly update an open issue remarking that the issue persists.
-
-Remember: Just because the issue you reported was reported here does not mean that it is an issue with Half-Life.  As well, should your issue not be resolved immediately, it does not mean that a resolution is not being researched or tested.  Patience is always appreciated.
-
-# Contributors
-
-This is a list of everybody who contributed to these projects. Thanks for helping to make them better!
-
-If you believe your name should be on this list make sure to let us know!
-
-* Sam Vanheer
-* JoelTroch
-* malortie
-* dtugend
-* Revenant100
-* fel1x-developer
-* LogicAndTrick
-* FreeSlave
-* zpl-zak
-* edgarbarney
-* Toodles2You
-* Jengerer
-* thefoofighter
-* Maxxiii
-* johndrinkwater
-* anchurcn
-* DanielOaks
-* MegaBrutal
-* suXinjke
-* IntriguingTiles
-* Oxofemple
-* YaLTeR
-* Ronin4862
-* the man
-* vasiavasiavasia95
-* NongBenz
-* Hezus
-* Anton
-* ArroganceJustified
-* a1batross
-* zaklaus
-* Uncle Mike
-* Bacontsu
-* L453rh4wk
-* P38TaKjYzY
-* hammermaps
-* LuckNukeHunter99
-* Veinhelm
-* jay!
-* BryanHaley
-* λλλλλλ
-* Streit
-* rbar1um43
-* LambdaLuke87
-* almix
-* sabian
-
-## Special Thanks
-
-* Valve Software
-* Gearbox Software
-* Alfred Reynolds
-* mikela-valve
-* TWHL Community
-* Knockout
-* Gamebanana
-* ModDB
+项目简介
+半条命 升级版、针锋相对 升级版 与 蓝色行动 升级版 是一系列代码仓库，提供更新优化版的半条命初代 SDK，专门适配三款官方发行的《半条命 1》PC 原版游戏。
+项目用途
+每个仓库均提供兼容 Visual Studio 2019 / 2022 的工程文件，并修复大量原版代码漏洞。《针锋相对》与《蓝色行动》项目为对应游戏的标准参考实现：完整保留原版游戏全部功能、原生代码逻辑（包括原版存在的重复代码设计）。
+该系列升级版仓库的核心目标：
+供模组制作者基于三款原作开发自定义模组，同时修复大量官方原版游戏存在的 BUG；
+附带完整模组安装文件，普通玩家可直接安装游玩，一键打上全部修复补丁；
+内置基于该 SDK 制作模组所需的全部依赖文件与基础资源。
+本项目允许修改范围
+游戏漏洞、程序 BUG 修复
+代码结构优化（重构、逻辑通用化、代码精简）
+（不包含游戏系统大规模重做，避免提高模组入门门槛、导致模组代码难以兼容合并）
+修复游戏资源内的致命问题（例如触发卡死、流程锁死的地图触发器异常）
+本项目禁止修改范围
+画面画质升级、高清材质 / 光影改造
+物理引擎改动
+引擎底层功能修改
+原版游戏玩法、机制调整
+如需配置 SDK 环境、开发模组相关帮助，可前往：
+TWHL 社区官网 或 官方 Discord 群组
+TWHL 维基百科提供完整模组开发入门教程：https://twhl.info/wiki/page/Half-Life_Programming_-_Getting_Started
+Discord 请查看 #welcome 频道了解规则；请勿在统一 SDK 频道提问基础问题，社区设有专门的模组求助分区。
+项目最新动态与进度更新：https://twhl.info/thread/view/20055
+运行该 SDK 编译模组的要求
+仅支持Steam 最新正式版《半条命》；
+运行《针锋相对》《蓝色行动》相关模组，需在 Steam 拥有并安装对应正版游戏（调用原版游戏资源）。
+SDK 编译教程
+详见文档：BUILDING.md
+模组安装教程
+详见文档：INSTALL.md
+不支持的内容
+不兼容旧版 WON 平台、远古版本 Steam 半条命
+不正式支持 Xash 引擎（可能可勉强运行，但无适配优化）
+升级版客户端无法联机原版服务器，原版客户端也无法进入升级版服务器
+禁止将升级版游戏 DLL 文件直接覆盖到原版游戏目录使用
+项目定位精简保守，不会新增大型功能与大幅度改版内容
+经典模组：生死决斗 & 弹跳模式
+《生死对决经典版》与《弹跳》两款模组的源码收录在原版半条命 SDK中。
+本系列升级版仓库仅聚焦《半条命》本体及两款官方资料片，因此已移除上述两个小型模组源码。
+由于原版源码无法在新版 VS 编译器下正常编译，社区已单独拆分适配仓库：
+生死对决升级版：https://github.com/twhl-community/dmc-updated
+弹跳模式升级版：https://github.com/twhl-community/ricochet-updated
+注：这两个衍生仓库仅做基础编译修复，无后续功能更新与技术维护。
+更新日志
+常规更新日志：CHANGELOG.md
+完整修复记录：FULL_UPDATED_CHANGELOG.md
+半条命 1 SDK 官方许可协议
+《半条命 1》SDK 版权所有 © 维尔福集团（Valve Corp.）
+本协议为你与维尔福公司之间的法律合约。
+下载、使用本半条命 1 SDK 前请仔细阅读协议条款。
+下载及使用本源码引擎 SDK 即代表你同意本许可协议；若不接受条款，请勿下载、使用本开发工具包。
+你可免费下载并使用本 SDK，基于半条命引擎开发、修改维尔福旗下游戏；
+可免费分发修改后的游戏源码与程序文件，仅限非商业免费用途。
+维尔福游戏用户协议参考：http://store.steampowered.com/subscriber_agreement/
+你可自由复制、修改、二次分发 SDK 及个人修改代码，仅限免费共享；
+所有二次分发版本必须附带原始 license.txt 与第三方授权文件 third_party_licenses.txt。
+分发本 SDK 或其核心内容时，必须保留原版版权声明及以下免责条款：
+产品免责声明
+本源码 SDK 及所有附带文件均按现状提供，无任何明示或暗示保障。
+维尔福及其合作方不承担任何商品适配性、无侵权、场景适配性等隐性担保责任。
+责任限制条款
+在任何情况下，维尔福公司不对任何特殊损失、意外损失、间接损失、衍生经济损失负责；
+包含但不限于商业利润亏损、业务中断、资料丢失及其他财产损失，
+即使维尔福已提前告知该类损失的潜在风险，也不承担相关赔偿责任。
+如需将本 SDK 用于商业用途，请通过邮箱联系维尔福官方：
+sourceengine@valvesoftware.com
+半条命 1 本体说明
+本文档为《半条命 1》引擎及关联游戏的官方说明文档。
+可通过本仓库提交半条命 1 系列产品的漏洞反馈与功能建议。
+问题反馈规范
+遇到游戏异常时，请先在问题列表检索历史反馈（包含已关闭工单），避免重复提交。
+新建反馈工单需包含以下完整信息：
+简洁明确的问题标题
+详细故障描述、命令行报错信息
+完整复现步骤
+电脑系统配置信息
+游戏控制台内输入 version 指令的版本信息
+日志内容请使用代码块格式粘贴，或上传至 Gist 在线文本工具。
+配置信息获取方式：Steam 菜单栏 → 帮助 → 系统信息 → 全选复制，粘贴至反馈内容中。
+社区讨论规范
+所有参与讨论的用户需遵守基础行为准则：
+禁止人身攻击、辱骂、贬低他人
+禁止无意义重复刷屏、重复提交相同问题
+反馈标题与内容禁止全部大写
+禁止反复留言催促问题修复
+温馨提示：
+工单提交不代表问题会立刻定位修复；
+未即时解决不代表官方停止排查，BUG 修复需要测试与迭代，请保持耐心。
+贡献者名单
+感谢所有为本项目贡献代码、修复问题的开发者：
+Sam Vanheer、JoelTroch、malortie、dtugend、Revenant100、fel1x-developer、LogicAndTrick、FreeSlave、zpl-zak、edgarbarney、Toodles2You、Jengerer、thefoofighter、Maxxiii、johndrinkwater、anchurcn、DanielOaks、MegaBrutal、suXinjke、IntriguingTiles、Oxofemple、YaLTeR、Ronin4862、the man、vasiavasiavasia95、NongBenz、Hezus、Anton、ArroganceJustified、a1batross、zaklaus、Uncle Mike、Bacontsu、L453rh4wk、P38TaKjYzY、hammermaps、LuckNukeHunter99、Veinhelm、jay!、BryanHaley、λλλλλλ、Streit、rbar1um43、LambdaLuke87、almix、sabian
+特别致谢
+维尔福软件（Valve Software）
+盖博克斯软件（Gearbox Software）
+Alfred Reynolds、mikela-valve
+TWHL 中文及全球模组社区
+Knockout、Gamebanana、ModDB 模组平台
