@@ -1,29 +1,5 @@
-# 项目简介
-[Half-Life Updated](https://github.com/twhl-community/halflife-updated)、[Opposing Force Updated](https://github.com/twhl-community/halflife-op4-updated) 与 [Blue Shift Updated](https://github.com/twhl-community/halflife-bs-updated) 是一系列代码仓库，提供**更新优化版的半条命初代 SDK**，专门适配三款官方发行的《半条命 1》PC 原版游戏。
-
-# 项目用途
-每个仓库均提供兼容 **Visual Studio 2019 / 2022** 的工程文件，并修复大量原版漏洞。
-《针锋相对》与《蓝色行动》项目为对应游戏的**标准参考实现**：完整保留原版全部功能与原生代码逻辑（含原版存在的重复代码设计）。
-
-升级版仓库核心目标：
-- 供模组制作者基于原作开发自定义模组
-- 修复大量官方原版游戏存在的 BUG
-- 提供可直接安装的修复版游戏本体
-- 内置模组开发所需全部依赖文件
-
-## 允许修改范围（项目合规改动）
-- 游戏漏洞、程序 BUG 修复
-- 代码优化：重构、逻辑通用化、代码精简
-  > 不包含系统大规模重做，避免提高模组入门门槛与兼容性问题
-- 修复游戏资源致命问题（卡死触发器、流程锁死等）
-
-## 禁止修改范围（不在开发范围内）
-- 画质升级、高清材质、光影美化
-- 物理引擎改动
-- 引擎底层修改
-- 原版游戏玩法与机制调整
-
----
+## 我修改的
+让message.cpp支持stb_truetype。
 
 ## 社区帮助与教程
 如需 SDK 部署、模组开发帮助：
