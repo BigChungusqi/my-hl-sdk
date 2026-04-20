@@ -53,6 +53,9 @@ void InitInput();
 void EV_HookEvents();
 void IN_Commands();
 
+// ImGui renderer initialization
+bool ImGuiHL_Init();
+
 /*
 ================================
 HUD_GetHullBounds
@@ -192,6 +195,9 @@ void DLLEXPORT HUD_Init()
 	InitInput();
 	gHUD.Init();
 	Scheme_Init();
+	
+	// Initialize ImGui renderer
+	ImGuiHL_Init();
 }
 
 

@@ -28,7 +28,8 @@
 
 #include "demo.h"
 #include "demo_api.h"
-#include "vgui_ScorePanel.h"
+
+#include "imgui_scoreboard.h"
 
 hud_player_info_t g_PlayerInfoList[MAX_PLAYERS_HUD + 1];	// player info from the engine
 extra_player_info_t g_PlayerExtraInfo[MAX_PLAYERS_HUD + 1]; // additional player info sent directly to the client dll
@@ -69,10 +70,7 @@ public:
 
 	bool CanShowSpeakerLabels() override
 	{
-		if (gViewPort && gViewPort->m_pScoreBoard)
-			return !gViewPort->m_pScoreBoard->isVisible();
-		else
-			return false;
+		return !ImGuiScoreboard_IsVisible();
 	}
 };
 static CHLVoiceStatusHelper g_VoiceStatusHelper;

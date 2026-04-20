@@ -20,7 +20,10 @@
 
 #include "vgui_TeamFortressViewport.h"
 #include "filesystem_utils.h"
+#include "imgui_scoreboard.h"
 
+// External scoreboard instance
+extern ImGuiScoreboard* g_ImGuiScoreboard;
 
 extern bool g_iAlive;
 
@@ -507,6 +510,18 @@ void IN_Impulse()
 void IN_ScoreDown()
 {
 	KeyDown(&in_score);
+	
+	// Only show scoreboard in multiplayer
+	if (gEngfuncs.GetMaxClients() <= 1)
+		return;
+	
+	// Initialize scoreboard on first use
+	ImGuiScoreboard_Init();
+	
+	// Show scoreboard
+	ImGuiScoreboard_Show();
+	
+	// Also call original for compatibility (intermission handling)
 	if (gViewPort)
 	{
 		gViewPort->ShowScoreBoard();
@@ -516,9 +531,26 @@ void IN_ScoreDown()
 void IN_ScoreUp()
 {
 	KeyUp(&in_score);
+	
+	// Hide scoreboard
+	ImGuiScoreboard_Hide();
+	
+	// Also call original for compatibility
 	if (gViewPort)
 	{
 		gViewPort->HideScoreBoard();
+	}
+}
+
+void IN_CycleLanguage()
+{
+	// Initialize scoreboard if needed
+	ImGuiScoreboard_Init();
+	
+	// Cycle to next language
+	if (g_ImGuiScoreboard)
+	{
+		g_ImGuiScoreboard->CycleLanguage();
 	}
 }
 
@@ -968,6 +1000,7 @@ void InitInput()
 	gEngfuncs.pfnAddCommand("-graph", IN_GraphUp);
 	gEngfuncs.pfnAddCommand("+break", IN_BreakDown);
 	gEngfuncs.pfnAddCommand("-break", IN_BreakUp);
+	gEngfuncs.pfnAddCommand("scoreboard_language", IN_CycleLanguage);
 
 	lookstrafe = gEngfuncs.pfnRegisterVariable("lookstrafe", "0", FCVAR_ARCHIVE);
 	lookspring = gEngfuncs.pfnRegisterVariable("lookspring", "0", FCVAR_ARCHIVE);

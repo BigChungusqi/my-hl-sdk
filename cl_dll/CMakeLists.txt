@@ -44,7 +44,8 @@ target_include_directories(client PRIVATE
 	../public
 	../pm_shared
 	../engine
-	../utils/vgui/include)
+	../utils/vgui/include
+	../imgui-1.92.7)
 
 target_compile_definitions(client PRIVATE
 	CLIENT_DLL
@@ -111,7 +112,15 @@ target_sources(client PRIVATE
 	vgui_TeamFortressViewport.cpp
 	vgui_teammenu.cpp
 	view.cpp
+	imgui_scoreboard.cpp
+	imgui_hl_renderer.cpp
 	voice_status.cpp
+
+	# ImGui library files
+	../imgui-1.92.7/imgui.cpp
+	../imgui-1.92.7/imgui_draw.cpp
+	../imgui-1.92.7/imgui_widgets.cpp
+	../imgui-1.92.7/imgui_tables.cpp
 
 	hl/hl_baseentity.cpp
 	hl/hl_events.cpp
@@ -187,6 +196,8 @@ target_sources(client PRIVATE
 	vgui_ScorePanel.h
 	vgui_SpectatorPanel.h
 	view.h
+	imgui_scoreboard.h
+	imgui_hl_renderer.h
 
 	../common/beamdef.h
 	../common/cl_entity.h

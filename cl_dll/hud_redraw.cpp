@@ -19,6 +19,7 @@
 #include "cl_util.h"
 
 #include "vgui_TeamFortressViewport.h"
+#include "imgui_scoreboard.h"
 
 #define MAX_LOGO_FRAMES 56
 
@@ -157,6 +158,12 @@ bool CHud::Redraw(float flTime, bool intermission)
 
 			pList = pList->pNext;
 		}
+	}
+
+	// Draw modern scoreboard (multiplayer only)
+	if (gEngfuncs.GetMaxClients() > 1 && ImGuiScoreboard_IsVisible())
+	{
+		ImGuiScoreboard_Render();
 	}
 
 	// are we in demo mode? do we need to draw the logo in the top corner?

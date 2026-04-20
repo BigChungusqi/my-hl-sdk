@@ -1,4 +1,4 @@
-// vgui_SpectatorPanel.cpp: implementation of the SpectatorPanel class.
+﻿// vgui_SpectatorPanel.cpp: implementation of the SpectatorPanel class.
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -10,7 +10,6 @@
 #include "pm_shared.h"
 #include "vgui_TeamFortressViewport.h"
 #include "vgui_SpectatorPanel.h"
-#include "vgui_ScorePanel.h"
 
 #include "Exports.h"
 

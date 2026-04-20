@@ -585,8 +585,7 @@ void CVoiceStatus::UpdateBanButton(int iClient)
 		return;
 
 	char playerID[16];
-	extern bool HACK_GetPlayerUniqueID(int iPlayer, char playerID[16]);
-	if (!HACK_GetPlayerUniqueID(iClient + 1, playerID))
+	if (!gEngfuncs.GetPlayerUniqueID(iClient + 1, playerID))
 		return;
 
 	// Figure out if it's blinking or not.

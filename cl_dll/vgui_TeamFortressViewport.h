@@ -39,7 +39,6 @@
 using namespace vgui;
 
 class Cursor;
-class ScorePanel;
 class SpectatorPanel;
 class CCommandMenu;
 class CommandLabel;
@@ -545,7 +544,6 @@ public:
 	void Initialize( void );
 
 	int		CreateCommandMenu( const char * menuFile, bool direction, int yOffset, bool flatDesign, float flButtonSizeX, float flButtonSizeY, int xOffset );
-	void	CreateScoreBoard( void );
 	CommandButton * CreateCustomButton( char *pButtonText, char * pButtonName, int  iYOffset );
 	CCommandMenu *	CreateDisguiseSubmenu( CommandButton *pButton, CCommandMenu *pParentMenu, const char *commandText, int iYOffset, int iXOffset = 0 );
 
@@ -614,7 +612,6 @@ public:
 	virtual void paintBackground();
 
 	CSchemeManager *GetSchemeManager( void ) { return &m_SchemeManager; }
-	ScorePanel *GetScoreBoard( void ) { return m_pScoreBoard; }
 
 	void *operator new( size_t stAllocateBlock );
 
@@ -627,7 +624,6 @@ public:
 	int						m_SpectatorCameraMenu;
 	int						m_PlayerMenu; // a list of current player
 	CClassMenuPanel	*m_pClassMenu;
-	ScorePanel		*m_pScoreBoard;
 	SpectatorPanel *		m_pSpectatorPanel;
 	char			m_szServerName[ MAX_SERVERNAME_LENGTH ];
 };
